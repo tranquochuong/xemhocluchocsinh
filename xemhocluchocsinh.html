@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <input type="number" id="kiemtra" placeholder="nhập điểm kiểm tra">
+            <input type="number" id="giuaki" placeholder="nhập điểm giữa kì">
+            <input type="number" id="kicuoi" placeholder="nhập điểm kì cuối">
+        </tr><br>
+        <button onclick="Check()">Check</button>
+        <h3>Result:</h3>
+        <div id="result">Hiện kết quả</div>
+    </table>
+        <script>
+            function Check(){
+                let a= document.getElementById("kiemtra").value;
+                let b= document.getElementById("giuaki").value;
+                let c= document.getElementById("kicuoi").value;
+                let result = (a + (b*2) + (a*3))/6;
+                
+             if(result < 5){
+                document.getElementById("result").innerHTML= " học sinh yếu";
+
+             }else if(result <=6.5)
+             {
+                document.getElementById("result").innerHTML= " học sinh trung bình";
+             }
+             else if(result <=7.9)
+             {
+                document.getElementById("result").innerHTML= " học sinh khá";
+             }
+             else if(result >=8)
+             {
+                document.getElementById("result").innerHTML= " học sinh giỏi";
+             }
+            }
+        </script>
+</body>
+</html>
